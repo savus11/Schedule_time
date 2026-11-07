@@ -1942,6 +1942,7 @@ ul.list{max-height:56vh}li.task{border:1px solid #eeece5;border-radius:10px;back
            +     (t.note ? '<div class="tnote">' + esc(t.note) + '</div>' : '')
             +     '<div class="tmeta"><span class="' + c.cls + '">' + c.text + '</span>'
             +       (pLabel ? '<span class="chip project-chip">' + esc(pLabel) + ' · 论文产出</span>' : '')
+            +       (taskOrdered(t) ? '<span class="chip">顺序 ' + taskSeq(t) + '</span>' : '')
             +       '<span class="chip">' + slotText + '</span>'
            +       (short ? '<span class="chip bad">排不完·差 ' + (need - sched) + ' 分</span>' : '')
            +       (t.est > 240 ? '<span class="chip warn">估 ' + Math.round(t.est/60*10)/10 + 'h · 建议拆成几步</span>' : '')
